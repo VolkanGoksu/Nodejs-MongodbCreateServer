@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+
+    <body>
+        <%- include('./partials/nav.ejs') %>
+        <div class="ui card">
+            <ol class="ui list">
+                <% if(yapilacaklar.length>0){ %>
+                    <% yapilacaklar.forEach(yapilacak=> { %>
+                        <li value="*">
+                            <a class="tekil" href="/yapilacaklar/<%=yapilacak._id%>">
+                                <%= yapilacak .baslik%>
+                            </a>
+                        </li>
+                        <% }) %>
+                            <% }else {%>
+                                <p>Ders Ekli Değil</p>
+                                <% } %>
+            </ol>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+ 
+<body>
+ 
+    <%- include('./partials/nav.ejs') %>
+
+  
+  <form class="ui form"  method="POST" action="/yapilacaklar" >
+    <div class="ui stacked secondary  segment">
+      <div class="field">
+        <input type="text"id="baslik" name="baslik" placeholder="Görev Ekle">
+      </div>
+    </div>
+    <button class="ui button" type="submit">Kaydet</button>
+  </form>
+

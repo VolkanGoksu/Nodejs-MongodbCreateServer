@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+      body > .grid {
+      height: 100%;
+    }
+    .image {
+      margin-top: -100px;
+    }
+    .column {
+      max-width: 450px;
+    }
+  </style>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.8/semantic.min.css" rel="stylesheet" />
+</head>
+<body>
+  <%- include('./partials/nav.ejs') %>
+  <div class="ui middle aligned center aligned grid">
+    <div class="column">
+      <h2 class="ui image header">
+        <div class="content">
+         Kayıt Ol
+        </div>
+      </h2>
+      <form method="POST" class="ui large form" action="/yapilacaklar"  >
+        <div class="ui stacked secondary  segment">
+          <div class="field">
+            <div class="ui left icon input">
+              <i class="user icon"></i>
+              <input type="text" name="email" placeholder="E-mail address">
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui left icon input">
+              <i class="lock icon"></i>
+              <input type="password" name="password" placeholder="Password">
+            </div>
+          </div>
+          <div class="ui fluid large teal submit button">Register</div>
+        </div>
+  
+        <div class="ui error message"></div>
+  
+      </form>
+  
+   
+    </div>
+  </div>
+</body>
+
+
+</html>
